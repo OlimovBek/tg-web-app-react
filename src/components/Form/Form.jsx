@@ -15,14 +15,14 @@ const Form = () => {
             subject
         }
         tg.sendData(JSON.stringify(data))
-    }, [])
+    }, [country, city, subject])
 
     useEffect(() => {
-        tg.onEvent('mainButtonClicked', onSendData())
+        tg.onEvent('mainButtonClicked', onSendData)
         return () => {
-            tg.offEvent('mainButtonClicked', onSendData())
+            tg.offEvent('mainButtonClicked', onSendData)
         }
-    }, [])
+    }, [onSendData])
     useEffect(() => {
         tg.MainButton.setParams({
                 text: "Ma'lumotlarni yuborish"
