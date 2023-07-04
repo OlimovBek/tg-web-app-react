@@ -5,7 +5,7 @@ import {useTelegram} from "../../hooks/useTelegram";
 const Form = () => {
     const [country, setCountry] = useState('');
     const [city, setCity] = useState('');
-    const [subject, setSubject] = useState('Jismoniy shaxs');
+    const [subject, setSubject] = useState('physical');
     const {tg} = useTelegram()
 
     const onSendData = useCallback(() => {
@@ -64,8 +64,8 @@ const Form = () => {
                 onChange={onChangeCity}
             />
             <select value={subject} onChange={onChangeSubject} className={'select'}>
-                <option value={'Jismoniy shaxs'}>Jismoniy shaxs</option>
-                <option value={'Yuridik shaxs'}>Yuridik shaxs</option>
+                <option value={'physical'}>Jismoniy shaxs</option>
+                <option value={'legal'}>Yuridik shaxs</option>
 
             </select>
         </div>
