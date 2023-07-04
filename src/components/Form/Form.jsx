@@ -33,7 +33,7 @@ const Form = () => {
     }
     return (
         <div className={'form'}>
-            <h3>Ma'lumotlaringizni kiritng</h3>
+            <h3>Ma'lumotlaringizni kiriting</h3>
             <input
                 className={'input'}
                 type="text"
